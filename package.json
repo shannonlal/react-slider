@@ -3,26 +3,24 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "repository": "https://github.com/shannonlal/react-slider.git",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "DEVELOPMENT=true webpack-dev-server --config webpack.dev.config.js"
+    "dev": "DEVELOPMENT=true webpack-dev-server --config webpack.dev.config.js",
+    "eslint": "eslint -c eslintrc.json ./app/src/**",
+    "docs": "./node_modules/.bin/esdoc -c ./esdoc.json"
   },
-  "keywords": [],
+  "keywords": [
+      "React",
+      "Slider"
+  ],
   "author": "shannonlal",
   "license": "MIT",
   "dependencies": {
     "react": "^15.3.2",
     "react-addons-css-transition-group": "^15.3.2",
     "react-dom": "^15.3.2",
-    "react-easy-transition": "0.0.5",
-    "react-redux": "^4.4.5",
-    "react-router": "^2.8.1",
-    "react-state-animation": "^0.1.0",
-    "react-swiper": "^0.1.5",
-    "redux": "^3.6.0",
-    "redux-promise": "^0.5.3",
-    "redux-thunk": "^2.1.0",
-    "swiper-r": "^0.1.3"
+    "react-easy-transition": "0.0.5"
   },
   "devDependencies": {
     "sass-loader": "^4.0.2",
@@ -44,6 +42,9 @@
     "lodash": "^4.16.2",
     "node-sass": "^3.10.0",
     "postcss-loader": "^0.13.0",
-    "react-interval": "^1.3.3"
+    "react-interval": "^1.3.3",
+    "esdoc": "^0.4.8",
+    "eslint": "^3.5.0",
+    "eslint-watch": "^2.1.14"
   }
 }

@@ -1,16 +1,15 @@
 import React from 'react';
-import Book from './Book';
+import PageSlide from './PageSlide';
 
+/**
+ *  Main Page Slider
+ */
 class Slider extends React.Component{
   //state...
   //lifecycle -- hooks
 
   constructor( props ){
     super(props);
-    this.state = {
-      books:this.props.books
-    };
-
   }
 
   componentWillMount(){
@@ -20,13 +19,12 @@ class Slider extends React.Component{
   componentDidMount(){
     console.log( "Component Did Mount");
   }
+
+  
   render(){
     return (
           <ul>
-            {this.state.books.map( (book)=> {
-              return <Book key={book.id} { ...book} />
-      
-            })}
+            <PageSlide />
           </ul>
     );
   }
