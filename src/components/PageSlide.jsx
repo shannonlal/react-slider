@@ -34,9 +34,8 @@ class PageSlide extends React.Component{
     }
 
     return (
-        <div className={slideVisible} >
-            <h1><b>{this.props.sliderTitle}</b></h1>
-            <h1><i>{this.props.sliderDescription}</i></h1>
+        <div className={slideVisible}>
+          {this.props.children}
         </div>
     );
   }

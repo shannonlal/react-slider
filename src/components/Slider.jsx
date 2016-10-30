@@ -33,9 +33,22 @@ class Slider extends React.Component{
 
     return (
           <div className="pageSlider">
-            <PageSlide  sliderTitle="Slide 1" sliderDescription="Hello World Description 1" slideVisible="false" />
-            <PageSlide  sliderTitle="Slide 2" sliderDescription="Hello World Description 2" slideVisible="true" />
-            <PageSlide  sliderTitle="Slide 3" sliderDescription="Hello World Description 3" slideVisible="false" />
+            <PageSlide  sliderTitle="Slide 1" sliderDescription="Hello World Description 1" slideVisible="false"> 
+                  <p>Inside Slide</p>
+              
+            </PageSlide>
+            <PageSlide  slideVisible="true" >
+              <div>
+                <p>Hello Slide 2</p>
+                <p>Hello World 2</p>
+              </div>
+            </PageSlide>
+            <PageSlide  sliderTitle="Slide 3" sliderDescription="Hello World Description 3" slideVisible="false" >
+              <div>
+                <p>Hello Slide 2</p>
+                <p>Hello World 2</p>
+              </div>
+            </PageSlide>  
             <button id="switch" >Switch</button> 
           
           </div>

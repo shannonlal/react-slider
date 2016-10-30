@@ -5,5 +5,3 @@ import Slider from './components/Slider';
 ReactDOM.render(
   <Slider />, document.getElementById('app')
 ); 
-
-console.log( 'Hello World');
