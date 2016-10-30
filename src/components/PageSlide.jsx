@@ -26,7 +26,7 @@ class PageSlide extends React.Component{
    */
   render(){
     return (
-        <div className="mySlides w3-container w3-red">
+        <div className="mySlides">
             <h1><b>Did You Know?</b></h1>
             <h1><i>We plan to sell trips to the moon in the 2020s</i></h1>
         </div>

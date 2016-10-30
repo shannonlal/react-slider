@@ -1,11 +1,21 @@
 .pageSlider{
     display:block;
-
-    .sliderLeft{
-        background-image: url(../images/left-arrow.png);
-    }
-
-    .sliderRight{
-        background-image: url(../images/right-arrow.png);
-    }
 }
+
+.sliderLeft{
+    background-image: url(../images/left-arrow.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 20px;
+    min-height: 100%;
+};
+
+.sliderRight{
+    background-image: url(../images/right-arrow.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 20px;
+    min-height: 100%;
+};

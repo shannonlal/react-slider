@@ -24,12 +24,21 @@ class Slider extends React.Component{
 
   
   render(){
+
+    /*let leftImage = {
+        background-image: 'url(images/left-arrow.png)'
+    };
+
+    let rightImage = {
+        background-image: 'url(images/right-arrow.png)'
+    };*/
+
     return (
-          <ul >
-            <div lassName="sliderLeft"></div>
+          <div>
+            <div className="sliderLeft"></div>
             <PageSlide />
-            <div lassName="sliderRight"></div>
-          </ul>
+            <div className="sliderRight"></div>
+          </div>
     );
   }
 };
