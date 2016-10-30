@@ -20,11 +20,15 @@ class Slider extends React.Component{
     console.log( "Component Did Mount");
   }
 
+
+
   
   render(){
     return (
-          <ul>
+          <ul >
+            <div lassName="sliderLeft"></div>
             <PageSlide />
+            <div lassName="sliderRight"></div>
           </ul>
     );
   }

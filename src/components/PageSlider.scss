@@ -1,3 +1,11 @@
 .pageSlider{
     display:block;
+
+    .sliderLeft{
+        background-image: url(../images/left-arrow.png);
+    }
+
+    .sliderRight{
+        background-image: url(../images/right-arrow.png);
+    }
 }
