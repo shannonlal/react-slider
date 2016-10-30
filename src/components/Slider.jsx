@@ -19,25 +19,25 @@ class Slider extends React.Component{
   componentDidMount(){
     console.log( "Component Did Mount");
   }
-
+  
+  switchSlide()){
+      
+      //1. TODO Need to switch state.  
+      //Switch state before load
+      //2. Load pages from 
+  }
 
 
   
   render(){
-
-    /*let leftImage = {
-        background-image: 'url(images/left-arrow.png)'
-    };
-
-    let rightImage = {
-        background-image: 'url(images/right-arrow.png)'
-    };*/
 
     return (
           <div className="pageSlider">
             <PageSlide  sliderTitle="Slide 1" sliderDescription="Hello World Description 1" slideVisible="false" />
             <PageSlide  sliderTitle="Slide 2" sliderDescription="Hello World Description 2" slideVisible="true" />
             <PageSlide  sliderTitle="Slide 3" sliderDescription="Hello World Description 3" slideVisible="false" />
+            <button id="switch" >Switch</button> 
+          
           </div>
     );
   }
