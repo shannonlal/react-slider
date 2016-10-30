@@ -20,7 +20,7 @@ class Slider extends React.Component{
     console.log( "Component Did Mount");
   }
   
-  switchSlide()){
+  switchSlide(){
       
       //1. TODO Need to switch state.  
       //Switch state before load
