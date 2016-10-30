@@ -34,10 +34,10 @@ class Slider extends React.Component{
     };*/
 
     return (
-          <div>
-            <div className="sliderLeft"></div>
-            <PageSlide />
-            <div className="sliderRight"></div>
+          <div className="pageSlider">
+            <PageSlide  sliderTitle="Slide 1" sliderDescription="Hello World Description 1" slideVisible="false" />
+            <PageSlide  sliderTitle="Slide 2" sliderDescription="Hello World Description 2" slideVisible="true" />
+            <PageSlide  sliderTitle="Slide 3" sliderDescription="Hello World Description 3" slideVisible="false" />
           </div>
     );
   }
