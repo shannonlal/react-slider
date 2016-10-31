@@ -9,6 +9,7 @@ class PageSlide extends React.Component{
 
   constructor( props ){
     super(props);
+    console.log( ' Id '+ this.props.slideId );
 
   }
 
@@ -28,7 +29,7 @@ class PageSlide extends React.Component{
 
     console.log( 'Shannon ', this.props.slideVisible );
 
-    let slideVisible = 'slideNotVisible'
+    let slideVisible = 'slideNotVisible';
     if( this.props.slideVisible  === "true" ){
       slideVisible = 'slideVisible';
     }

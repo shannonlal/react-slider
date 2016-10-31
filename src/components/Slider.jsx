@@ -10,6 +10,12 @@ class Slider extends React.Component{
 
   constructor( props ){
     super(props);
+    this.state = {
+      currentSlide :0,
+      numberOfSlides: 0
+    };
+
+    this.switchSlide = this.switchSlide.bind( this );
   }
 
   componentWillMount(){
@@ -21,10 +27,18 @@ class Slider extends React.Component{
   }
   
   switchSlide(){
-      
-      //1. TODO Need to switch state.  
-      //Switch state before load
-      //2. Load pages from 
+      console.log( 'Switching Slide');
+      let nextSlide = this.state.currentSlide+1;
+      this.setState({currentSlide: nextSlide});
+  }
+
+  slideVisible(){
+    console.log( 'The Id ->' + this.props.slideId );
+    let slideVisible = 'slideNotVisible';
+
+    if( this.props.slideVisible  === "true" ){
+      slideVisible = 'slideVisible';
+    }
   }
 
 
@@ -33,24 +47,24 @@ class Slider extends React.Component{
 
     return (
           <div className="pageSlider">
-            <PageSlide  sliderTitle="Slide 1" sliderDescription="Hello World Description 1" slideVisible="false"> 
-                  <p>Inside Slide</p>
+            <PageSlide  slideVisible="true" onChange={this.slideVisible} slideId="1"> 
+                  <p>Inside Slide {this.state.currentSlide}</p>
               
             </PageSlide>
-            <PageSlide  slideVisible="true" >
+            <PageSlide  slideVisible="true" onChange={this.slideVisible} slideId="2">
               <div>
-                <p>Hello Slide 2</p>
+                <p>Hello Slide 2 {this.state.currentSlide}</p>
                 <p>Hello World 2</p>
               </div>
             </PageSlide>
-            <PageSlide  sliderTitle="Slide 3" sliderDescription="Hello World Description 3" slideVisible="false" >
+            <PageSlide  slideVisible="true" onChange={this.slideVisible} slideId="3">
               <div>
-                <p>Hello Slide 2</p>
-                <p>Hello World 2</p>
+                <p>Hello Slide 3 {this.state.currentSlide}</p>
+                <p>Hello World 3</p>
               </div>
             </PageSlide>  
             <div className="switchButton">
-              <button id="switch" >Switch</button> 
+              <button id="switch" onClick={ this.switchSlide }>Switch</button> 
             </div>
           </div>
 
