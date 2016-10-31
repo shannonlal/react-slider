@@ -49,9 +49,11 @@ class Slider extends React.Component{
                 <p>Hello World 2</p>
               </div>
             </PageSlide>  
-            <button id="switch" >Switch</button> 
-          
+            <div className="switchButton">
+              <button id="switch" >Switch</button> 
+            </div>
           </div>
+
     );
   }
 };
