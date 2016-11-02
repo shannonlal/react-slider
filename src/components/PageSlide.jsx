@@ -21,6 +21,10 @@ class PageSlide extends React.Component{
     console.log( "Component Did Mount");
   }
 
+  componentDidUpdate(){
+    console.log(" Page Slider Did Update -> ",this.props.slideVisible);
+  }
+
   /**
    * render
    * @return {ReactElement} markup
@@ -30,7 +34,7 @@ class PageSlide extends React.Component{
     console.log( 'Shannon ', this.props.slideVisible );
 
     let slideVisible = 'slideNotVisible';
-    if( this.props.slideVisible  === "true" ){
+    if( this.props.slideVisible === true ){
       slideVisible = 'slideVisible';
     }
 
