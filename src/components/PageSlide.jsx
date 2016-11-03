@@ -1,6 +1,7 @@
 import './PageSlider.scss';
 
 import React from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 /**
  *  Main Page Slider
@@ -13,17 +14,6 @@ class PageSlide extends React.Component{
 
   }
 
-  componentWillMount(){
-    console.log("Component Will Mount");
-  }
-
-  componentDidMount(){
-    console.log( "Component Did Mount");
-  }
-
-  componentDidUpdate(){
-    console.log(" Page Slider Did Update -> ",this.props.slideVisible);
-  }
 
   /**
    * render
@@ -39,8 +29,12 @@ class PageSlide extends React.Component{
     }
 
     return (
-        <div className={slideVisible}>
-          {this.props.children}
+        <div className={slideVisible} onClick={this.props.onChange}>
+          <ReactCSSTransitionGroup transitionName="example" 
+          transitionEnterTimeout={2000} transitionLeaveTimeout={300} 
+          transitionAppear={true} transitionAppearTimeout={2000}>
+            {this.props.children}
+          </ReactCSSTransitionGroup>
         </div>
     );
   }
