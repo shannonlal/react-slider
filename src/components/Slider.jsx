@@ -49,22 +49,26 @@ class Slider extends React.Component{
     return (
       <div>
           <div className="pageSlider">
-            <PageSlide  slideVisible={this.state.slideVisible[0]} onChange={this.switchSlide} slideId="1"> 
-                  <p>Inside Slide {this.state.currentSlide}</p>
-              
-            </PageSlide>
-            <PageSlide  slideVisible={this.state.slideVisible[1]} onChange={this.switchSlide} slideId="2">
-              <div>
-                <p>Hello Slide 2 {this.state.currentSlide}</p>
-                <p>Hello World 2</p>
+            <div className="sliderLeft" />
+              <div className="slides">
+                <PageSlide  slideVisible={this.state.slideVisible[0]} onChange={this.switchSlide} slideId="1"> 
+                      <p>Inside Slide {this.state.currentSlide}</p>
+                  
+                </PageSlide>
+                <PageSlide  slideVisible={this.state.slideVisible[1]} onChange={this.switchSlide} slideId="2">
+                  <div>
+                    <p>Hello Slide 2 {this.state.currentSlide}</p>
+                    <p>Hello World 2</p>
+                  </div>
+                </PageSlide>
+                <PageSlide  slideVisible={this.state.slideVisible[2]} onChange={this.switchSlide} slideId="3">
+                  <div>
+                    <p>Hello Slide 3 {this.state.currentSlide}</p>
+                    <p>Hello World 3</p>
+                  </div>
+                </PageSlide>  
               </div>
-            </PageSlide>
-            <PageSlide  slideVisible={this.state.slideVisible[2]} onChange={this.switchSlide} slideId="3">
-              <div>
-                <p>Hello Slide 3 {this.state.currentSlide}</p>
-                <p>Hello World 3</p>
-              </div>
-            </PageSlide>  
+            <div className="sliderRight"/>
           </div>
           <div className="switchButton">
               <button id="switch" onClick={ this.switchSlide }>Switch</button> 

@@ -28,13 +28,13 @@ class PageSlide extends React.Component{
       slideVisible = 'slideVisible';
     }
 
+    let cssClasses = `slideVisible`
+
     return (
-        <div className={slideVisible} onClick={this.props.onChange}>
-          <ReactCSSTransitionGroup transitionName="example" 
-          transitionEnterTimeout={2000} transitionLeaveTimeout={300} 
-          transitionAppear={true} transitionAppearTimeout={2000}>
+        <div className={cssClasses} onClick={this.props.onChange}>
+          
             {this.props.children}
-          </ReactCSSTransitionGroup>
+
         </div>
     );
   }
