@@ -1,6 +1,5 @@
 1. Implement logic for switching the slide
-i. Implement Navigation Indicator.  
-ii. Pass it class
-iii. Function to determine if should be visible is in the page slider
+i. Logic function to pickup which direction.  It then needs to navigate between different pages
+determine if it should go right or left
 
 2. Check if changing state updates the props
