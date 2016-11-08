@@ -15,7 +15,6 @@ class NavigationIndicator extends React.Component{
 
   constructor( props ){
     super(props);
-    console.log( 'Initialized Navigation Indicator', props );
     this.clicked = this.clicked.bind( this );
   }
 

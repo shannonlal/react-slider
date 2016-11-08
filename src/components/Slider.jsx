@@ -53,7 +53,7 @@ class Slider extends React.Component{
     return (
       <div>
           <div className="pageSlider">
-            <NavigationIndicator navigationClassName= "sliderLeft"  navigationType="left" navigationClicked={this.navigationClicked}/>
+            <NavigationIndicator navigationClassName= "navigationLeft"  navigationType="left" navigationClicked={this.navigationClicked}/>
               <div className="slides">
                 <PageSlide  slideVisible={this.state.slideVisible[0]} onChange={this.switchSlide} slideId="1"> 
                       <p>Inside Slide {this.state.currentSlide}</p>
@@ -72,7 +72,7 @@ class Slider extends React.Component{
                   </div>
                 </PageSlide>  
               </div>
-            <NavigationIndicator navigationClassName= "sliderRight"  navigationType="right" navigationClicked={this.navigationClicked}/>
+            <NavigationIndicator navigationClassName= "navigationRight"  navigationType="right" navigationClicked={this.navigationClicked}/>
           </div>
           <div className="switchButton">
               <button id="switch" onClick={ this.switchSlide }>Switch</button> 

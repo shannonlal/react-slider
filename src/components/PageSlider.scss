@@ -11,7 +11,7 @@
     text-align:center;
 }
 
-.sliderLeft{
+.navigationLeft{
     background-image: url(../images/left-arrow.png);
     background-size: contain;
     background-position: left;
@@ -24,7 +24,19 @@
     
 };
 
-.sliderRight{
+.navigationNone{
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+    margin: 20px;
+    min-width: 50px;
+    min-height: 50px;
+    flex:1;
+    text-align:left;
+    
+};
+
+.navigationRight{
     background-image: url(../images/right-arrow.png);
     background-size: contain;
     background-position: right;
