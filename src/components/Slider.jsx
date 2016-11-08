@@ -1,6 +1,6 @@
 import React from 'react';
 import PageSlide from './PageSlide';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import NavigationIndicator from './NavigationIndicator';
 
 /**
  *  Main Page Slider
@@ -18,6 +18,7 @@ class Slider extends React.Component{
     };
 
     this.switchSlide = this.switchSlide.bind( this );
+    this.navigationClicked = this.navigationClicked.bind( this );
   }
   
   switchSlide(){
@@ -42,6 +43,9 @@ class Slider extends React.Component{
     }
   }
 
+  navigationClicked( direction ){
+    console.log( 'Navigation Direction Clicked', direction );
+  }
 
   
   render(){
@@ -49,7 +53,7 @@ class Slider extends React.Component{
     return (
       <div>
           <div className="pageSlider">
-            <div className="sliderLeft" />
+            <NavigationIndicator navigationClassName= "sliderLeft"  navigationType="left" navigationClicked={this.navigationClicked}/>
               <div className="slides">
                 <PageSlide  slideVisible={this.state.slideVisible[0]} onChange={this.switchSlide} slideId="1"> 
                       <p>Inside Slide {this.state.currentSlide}</p>
@@ -68,7 +72,7 @@ class Slider extends React.Component{
                   </div>
                 </PageSlide>  
               </div>
-            <div className="sliderRight"/>
+            <NavigationIndicator navigationClassName= "sliderRight"  navigationType="right" navigationClicked={this.navigationClicked}/>
           </div>
           <div className="switchButton">
               <button id="switch" onClick={ this.switchSlide }>Switch</button> 

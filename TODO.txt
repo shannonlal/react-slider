@@ -1,3 +1,6 @@
 1. Implement logic for switching the slide
+i. Implement Navigation Indicator.  
+ii. Pass it class
+iii. Function to determine if should be visible is in the page slider
 
 2. Check if changing state updates the props
