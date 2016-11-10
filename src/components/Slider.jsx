@@ -44,8 +44,33 @@ class Slider extends React.Component{
   }
 
   navigationClicked( direction ){
-    console.log( 'Navigation Direction Clicked', direction );
+
+    if( direction === 'right'){
+      let nextSlide = this.state.currentSlide+1;
+
+      let slideState = this.state.slideVisible.slice();
+      slideState[ nextSlide  ] = true;
+      slideState[ nextSlide -1 ] = false;
+
+      this.setState({
+        currentSlide: nextSlide,
+        slideVisible: slideState
+      });
+    }else{
+      let nextSlide = this.state.currentSlide-1;
+
+      let slideState = this.state.slideVisible.slice();
+      slideState[ nextSlide  ] = false;
+      slideState[ nextSlide + 1 ] = false;
+
+      this.setState({
+        currentSlide: nextSlide,
+        slideVisible: slideState
+      });
+    }
   }
+
+
 
   
   render(){
