@@ -12,7 +12,9 @@ class PageSlide extends React.Component{
     super(props);
     console.log( ' Id '+ this.props.slideId );
 
+
   }
+
 
 
   /**
@@ -28,10 +30,10 @@ class PageSlide extends React.Component{
       slideVisible = 'slideVisible';
     }
 
-    let cssClasses = `slideVisible`
+    //let cssClasses = `slideVisible`
 
     return (
-        <div className={cssClasses} onClick={this.props.onChange}>
+        <div className={slideVisible} onClick={this.props.onChange}>
           
             {this.props.children}
 
