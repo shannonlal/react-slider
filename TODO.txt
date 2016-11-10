@@ -1,6 +1,5 @@
-1. Implement logic for switching the slide
-i. Logic function to pickup which direction.  It then needs to navigate between different pages
-determine if it should go right or left
+i. Implement start slide flag
+ii. Implement end slide flag
 ii. When to hide and show navigation arrow
 iii. end and start of loop
 iv. Transitions vertically 
