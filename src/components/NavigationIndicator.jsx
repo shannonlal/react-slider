@@ -23,6 +23,9 @@ class NavigationIndicator extends React.Component{
       this.props.navigationClicked( this.props.navigationType);
   }
 
+  componentDidUpdate(){
+    console.log( 'Properties updated', this.props);
+  }
 
   /**
    * render
