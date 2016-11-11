@@ -50,31 +50,52 @@ class Slider extends React.Component{
 
   navigationClicked( direction ){
     if( direction === 'right'){
-      let nextSlide = this.state.currentSlide+1;
 
-      let slideState = this.state.slideVisible.slice();
-      slideState[ nextSlide  ] = true;
-      slideState[ nextSlide -1 ] = false;
+      if( this.state.currentSlide < 3){
+        let nextSlide = this.state.currentSlide+1;
 
-      this.setState({
-        currentSlide: nextSlide,
-        slideVisible: slideState,
-        startSlide: (nextSlide === 0),
-        endSlide: (nextSlide === 3)
-      });
+        let slideState = this.state.slideVisible.slice();
+        slideState[ nextSlide  ] = true;
+        slideState[ nextSlide -1 ] = false;
+
+        this.setState({
+          currentSlide: nextSlide,
+          slideVisible: slideState,
+          startSlide: (nextSlide === 0),
+          endSlide: (nextSlide === 3)
+        });
+      }else{
+        this.setState({
+          currentSlide: 0,
+          slideVisible: [true, false, false],
+          startSlide: false,
+          endSlide: true
+        });
+      }
+
     }else{
-      let nextSlide = this.state.currentSlide-1;
 
-      let slideState = this.state.slideVisible.slice();
-      slideState[ nextSlide  ] = true;
-      slideState[ nextSlide + 1 ] = false;
+      if( this.state.currentSlide > 0 ){
+        let nextSlide = this.state.currentSlide-1;
 
-      this.setState({
-        currentSlide: nextSlide,
-        slideVisible: slideState,
-        startSlide: (nextSlide === 0),
-        endSlide: (nextSlide === 3)
-      });
+        let slideState = this.state.slideVisible.slice();
+        slideState[ nextSlide  ] = true;
+        slideState[ nextSlide + 1 ] = false;
+
+        this.setState({
+          currentSlide: nextSlide,
+          slideVisible: slideState,
+          startSlide: (nextSlide === 0),
+          endSlide: (nextSlide === 3)
+        });
+      }else{
+        this.setState({
+          currentSlide: 3,
+          slideVisible: [fa,se, false, true],
+          startSlide: true,
+          endSlide: false
+        });
+      }
     }
   }
 
