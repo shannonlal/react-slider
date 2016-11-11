@@ -78,15 +78,17 @@ class Slider extends React.Component{
     }
   }
 
-
-
-  
   render(){
 
     return (
       <div>
           <div className="pageSlider">
-            <NavigationIndicator navigationClassName= "navigationLeft" positionFlag={this.state.startSlide} navigationType="left" navigationClicked={this.navigationClicked}/>
+            <NavigationIndicator 
+                          navigationClassName="navigationLeft" 
+                          positionFlag={this.state.startSlide} 
+                          navigationType="left" 
+                          displayIndicator={this.state.startSlide}
+                          navigationClicked={this.navigationClicked}/>
               <div className="slides">
                 <PageSlide  slideVisible={this.state.slideVisible[0]} onChange={this.switchSlide} slideId="1"> 
                       <p>Inside Slide {this.state.currentSlide}</p>
@@ -105,7 +107,12 @@ class Slider extends React.Component{
                   </div>
                 </PageSlide>  
               </div>
-            <NavigationIndicator navigationClassName= "navigationRight"   positionFlag={this.state.endSlide} navigationType="right" navigationClicked={this.navigationClicked}/>
+            <NavigationIndicator 
+                    navigationClassName= "navigationRight" 
+                    positionFlag={this.state.endSlide} 
+                    navigationType="right"
+                    displayIndicator={this.state.endSlide}
+                    navigationClicked={this.navigationClicked}/>
           </div>
         </div>
 

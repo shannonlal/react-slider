@@ -27,13 +27,26 @@ class NavigationIndicator extends React.Component{
     console.log( 'Properties updated', this.props);
   }
 
+
+
   /**
    * render
    * @return {ReactElement} markup
    */
   render(){
+
+    let navigationSlider = 'navigationNone';
+
+    if( !this.props.displayIndicator){
+      if( this.props.navigationType === 'right') {
+        navigationSlider = 'navigationRight';
+      }else{
+        navigationSlider = 'navigationLeft';
+      }
+    }
+
     return (
-        <div className={this.props.navigationClassName} 
+        <div className={navigationSlider} 
                 onClick={this.clicked}>
         </div>
     );
