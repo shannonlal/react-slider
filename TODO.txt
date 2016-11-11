@@ -1,6 +1,4 @@
-i. Implement start slide flag
-ii. Implement end slide flag
-ii. When to hide and show navigation arrow
+
 iii. end and start of loop
 iv. Transitions vertically 
 
