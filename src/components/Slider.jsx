@@ -49,8 +49,6 @@ class Slider extends React.Component{
   }
 
   navigationClicked( direction ){
-
-    debugger;
     if( direction === 'right'){
       let nextSlide = this.state.currentSlide+1;
 
