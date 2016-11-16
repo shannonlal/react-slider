@@ -46,7 +46,7 @@ class NavigationBullet extends React.Component{
     }
 
     return (
-        <div className="navigationBulletStyle ">
+        <div className="navigationBulletStyle navigationBulletStyle-fillup">
             <ul>
                 <li className="current"><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
