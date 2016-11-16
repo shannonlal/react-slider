@@ -1,5 +1,6 @@
-
-iii. end and start of loop
+i. Pagination 
+ii. Slide vertically
+iii. Drag and release
 iv. Transitions vertically 
 
 2. Check if changing state updates the props
