@@ -103,10 +103,39 @@
 	outline: none;
 	border-radius: 50%;
 	background-color: #fff;
-	background-color: rgba(255,255,255,0.3);
+	background-color: rgba(232, 58, 58,0.3);
 	text-indent: -999em;
 	cursor: pointer; /* make the text accessible to screen readers */
 	position: absolute;
+}
+
+/* Fill up */
+.navigationBulletStyle-fillup li a {
+	overflow: hidden;
+	background-color: rgba(0,0,0,0);
+	box-shadow: inset 0 0 0 2px rgba(232, 58, 58,1);
+	transition: background 0.3s;
+}
+
+.navigationBulletStyle-fillup li a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	height: 0;
+	left: 0;
+	width: 100%;
+	background-color: #fff;
+	box-shadow: 0 0 1px #fff;
+	transition: height 0.3s;
+}
+
+.navigationBulletStyle-fillup li a:hover,
+.navigationBulletStyle-fillup li a:focus {
+	background-color: rgba(0,0,0,0.2);
+}
+
+.navigationBulletStyle-fillup li.current a::after {
+	height: 100%;
 }
 
 @-webkit-keyframes NAME-YOUR-ANIMATION {
