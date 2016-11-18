@@ -138,7 +138,7 @@ class Slider extends React.Component{
                       navigationClicked={this.navigationClicked}/>
             </div>
             <div className="paginationSection">
-              <NavigationBullet />
+              <NavigationBullet navigationClicked = {this.navigationClicked} navigationType="right" />
             </div>
 
             </div>
